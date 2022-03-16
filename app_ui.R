@@ -218,14 +218,18 @@ intro_page <- tabPanel(
              point of contact. The activity rate assumes that people are not seeking out interactions
              but are going through a typical day to day. The recovery rate is the reciprocal of the mean 
              duration of the illness which is about 14 days. Each step in the model will represent one day.
-             Below are links to the sites.",
-            a("Duration of Disease", href = "https://www.cdc.gov/coronavirus/2019-ncov/hcp/duration-isolation.html"),
-            a("Duration of Disease", href = "https://www.cdc.gov/coronavirus/2019-ncov/science/science-briefs/masking-science-sars-cov2.html"),
-            a("Duration of Disease", href = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7976050/")
+             Below are links to the sites."
             )
+    ),
+    tags$p(
+      id = "data",
+        a("Duration of Disease--", href = "https://www.cdc.gov/coronavirus/2019-ncov/hcp/duration-isolation.html"),
+        a("Mask Data--", href = "https://www.cdc.gov/coronavirus/2019-ncov/science/science-briefs/masking-science-sars-cov2.html"),
+        a("Infection Probability", href = "https://www.nature.com/articles/s41598-021-94960-5#Fig1")
+      )
     )
-  )
-) 
+  ) 
+
 # --------- DEFINING UI: PUTTING PAGES TOGETHER ----------
 ui <- navbarPage(
   "A3: Disease Modeling",
